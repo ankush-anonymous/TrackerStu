@@ -4,6 +4,7 @@ import UnstyledButtonCustom from "../Components/UnstyledButtonCustom"; // Adjust
 import { data } from "../data/data";
 import toastr from "toastr";
 import "toastr/build/toastr.css";
+import axios from "axios";
 
 const LoginPage = () => {
   const [registerNo, setRegisterNo] = useState("");
@@ -17,8 +18,12 @@ const LoginPage = () => {
       // If found, set isMatched to true
       setIsMatched(true);
       // Perform any other actions if needed
-      toastr.success("Student Found");
+      const postData = {
+        registerationNo: registerNo,
+      };
+      axios.post("/api/v1/student/createRecord", postData);
       console.log(`Student found: ${foundStudent.name}`);
+      toastr.success("Student Found");
     } else {
       // If not found, set isMatched to false
       setIsMatched(false);
