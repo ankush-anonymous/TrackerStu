@@ -1,9 +1,32 @@
 import React, { useState } from "react";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import UnstyledButtonCustom from "../Components/UnstyledButtonCustom"; // Adjust the import path
+import { data } from "../data/data";
+import toastr from "toastr";
+import "toastr/build/toastr.css";
 
 const LoginPage = () => {
   const [registerNo, setRegisterNo] = useState("");
+  const [isMatched, setIsMatched] = useState(false);
+
+  const handleSubmit = () => {
+    // Check if registerNo exists in data array
+    const foundStudent = data.find((student) => student.regNo === registerNo);
+
+    if (foundStudent) {
+      // If found, set isMatched to true
+      setIsMatched(true);
+      // Perform any other actions if needed
+      toastr.success("Student Found");
+      console.log(`Student found: ${foundStudent.name}`);
+    } else {
+      // If not found, set isMatched to false
+      setIsMatched(false);
+      // Perform any other actions if needed
+      console.log("Student not found");
+      toastr.warning("Student Not Found");
+    }
+  };
 
   return (
     <>
@@ -78,7 +101,13 @@ const LoginPage = () => {
                         marginTop: 2,
                       }}
                     >
-                      <UnstyledButtonCustom>Submit</UnstyledButtonCustom>
+                      <Button
+                        variant="outlined"
+                        sx={{ padding: "10px", width: "100%" }}
+                        onClick={() => handleSubmit()}
+                      >
+                        Submit
+                      </Button>
                     </Box>
                   </Box>
                 </Box>
