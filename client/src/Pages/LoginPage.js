@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import UnstyledButtonCustom from "../Components/UnstyledButtonCustom"; // Adjust the import path
 
 const LoginPage = () => {
@@ -9,7 +9,12 @@ const LoginPage = () => {
     <>
       <Box>
         <Grid container>
-          <Grid item xs={0} md={7}>
+          <Grid
+            item
+            xs={0}
+            md={7}
+            sx={{ display: { xs: "none", md: "block" } }}
+          >
             <Box className="h-full flex">
               <Box className="justify-center items-center p-20">
                 <lottie-player
@@ -24,21 +29,39 @@ const LoginPage = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={0} md={5}>
-            <Box className="bg-cyan-400 h-full p-10">
-              <Box className="bg-white p-5 rounded ">
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              height: { xs: "100vh", md: "100%", lg: "100%" },
+            }}
+          >
+            <Box
+              className="bg-cyan-400 h-full "
+              sx={{ padding: { xs: "15px", md: "30px" } }}
+            >
+              <Box
+                className="bg-white rounded"
+                sx={{ padding: { xs: "10px" }, marginTop: { xs: "20px" } }}
+              >
                 <img src="https://res.cloudinary.com/dtjg2hgky/image/upload/v1706127292/vit_logo_png_ybgruu.png" />
               </Box>
               <Box className="bg-white p-5 rounded mt-10 justify-center items-center">
                 <Box className="text-center font-base">
-                  <Typography variant="h5">
+                  <img
+                    src="https://res.cloudinary.com/dtjg2hgky/image/upload/v1706210484/Teacher%27s%20Stu.png"
+                    alt="Teacher's Student"
+                    style={{ width: "100%", marginBottom: "10px" }}
+                  />
+                  <Typography variant="h4">
                     Attendance Recording System
                   </Typography>
                   <br />
                   <Typography variant="h5">Dr. Rachit Chandak</Typography>
                   <Typography variant="h6">BCSE428P</Typography>
                 </Box>
-                <Box className="p-10 flex">
+                <Box className="p-10 flex-col">
                   <Box className="justify-center items-center">
                     <TextField
                       fullWidth
@@ -48,7 +71,13 @@ const LoginPage = () => {
                       margin="normal"
                       variant="outlined"
                     />
-                    <Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        marginTop: 2,
+                      }}
+                    >
                       <UnstyledButtonCustom>Submit</UnstyledButtonCustom>
                     </Box>
                   </Box>

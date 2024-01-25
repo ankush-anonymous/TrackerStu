@@ -99,7 +99,7 @@ export default function UnstyledButtonCustom() {
         <polygon points="0,50 0,0 150,0 150,50" className="bg" />
         <polygon points="0,50 0,0 150,0 150,50" className="borderEffect" />
         <foreignObject x="0" y="0" width="150" height="50">
-          <div className="content">Button</div>
+          <div className="content">Submit</div>
         </foreignObject>
       </svg>
     </CustomButtonRoot>
