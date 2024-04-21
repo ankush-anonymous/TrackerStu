@@ -86,7 +86,7 @@ const LoginPage = () => {
                     Attendance Recording System
                   </Typography>
                   <br />
-                  <Typography variant="h5">Dr. Rachit Chandak</Typography>
+                  <Typography variant="h5">Dr. Sathesh Kumar</Typography>
                   <Typography variant="h6">BCSE428P</Typography>
                 </Box>
                 <Box className="p-10 flex-col">
