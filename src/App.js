@@ -5,8 +5,8 @@ import axios from "axios";
 
 import LoginPage from "./Pages/LoginPage";
 
-axios.defaults.baseURL = "http://192.168.137.1:5000";
-
+axios.defaults.baseURL = "http://raspberrypi.local:5000";
+// axios.defaults.baseURL = "http://192.168.137.1:5000";
 function App() {
   return (
     <div className="App">

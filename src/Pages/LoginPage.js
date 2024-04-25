@@ -73,7 +73,7 @@ const LoginPage = () => {
                 className="bg-white rounded"
                 sx={{ padding: { xs: "10px" }, marginTop: { xs: "20px" } }}
               >
-                <img src="https://res.cloudinary.com/dtjg2hgky/image/upload/v1706127292/vit_logo_png_ybgruu.png" />
+                <img src="./logoVIT.png" alt="vitLogo" />
               </Box>
               <Box className="bg-white p-5 rounded mt-10 justify-center items-center">
                 <Box className="text-center font-base">
@@ -86,8 +86,8 @@ const LoginPage = () => {
                     Attendance Recording System
                   </Typography>
                   <br />
-                  <Typography variant="h5">Dr. Sathesh Kumar</Typography>
-                  <Typography variant="h6">BCSE428P</Typography>
+                  <Typography variant="h5">Dr. Jayanthi R</Typography>
+                  <Typography variant="h6">BCSE301L</Typography>
                 </Box>
                 <Box className="p-10 flex-col">
                   <Box className="justify-center items-center">
